@@ -10,7 +10,41 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="box">
+        <header>
+            <h2>Gerador de Senhas</h2>
+        </header>
+
+        <div class="body-box">
+            <input type="text" class="txtPassword">
+
+            <div class="content-buttons">
+                <button class="primary-button btnGerar">🔑 Gerar Senha</button>
+                <button class="secondary-button btnEdit">Editar</button>
+            </div>
+
+            <div class="edit-password">
+                <p>Tamanho</p>
+                <input type="range" min="1" max="50" value="30" id="rangePassword">
+
+                <label for="uppercase">
+                    <input type="checkbox" name="uppercase" id="uppercase">
+                    <p>Maiúsculas</p>
+                </label>
+                
+                <label for="numbers">
+                    <input type="checkbox" name="numbers" id="numbers">
+                    <p>Números</p>
+                </label>
+                
+                <label for="special">
+                    <input type="checkbox" name="special" id="special">
+                    <p>Especial</p>
+                </label>
+            </div>
+        </div>       
+    </div>
+
     <script src="./app.js"></script>
 </body>
 </html>
