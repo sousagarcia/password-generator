@@ -1,3 +1,5 @@
+import { generatePassword, copyPassword } from './generatePassword.js';
+
 let bntEdit = document.querySelector('.btnEdit');
 let boxEdit = document.querySelector('.edit-password');
 let btnGerar = document.querySelector('.btnGerar');
@@ -11,47 +13,19 @@ bntEdit.addEventListener('click', () => {
     boxEdit.classList.toggle('active');
 });
 
-btnGerar.addEventListener('click', () => {  
-    const textarea = document.createElement('textarea');
+btnGerar.addEventListener('click', () => { 
+    let settings = {
+        handlerUppercase: chkUppercase.checked, 
+        handlerNumber: chkNumbers.checked, 
+        handlerSpecial: chkSpecial.checked
+    }
     
     let password = generatePassword(
         rgLength.value, 
-        chkUppercase.checked, 
-        chkNumbers.checked, 
-        chkSpecial.checked
+        settings
     );
 
     txtPassword.value = password;
 
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
+    copyPassword(password);
 });
-
-function generatePassword(length = 16, handlerUppercase = true, handlerNumber = true, handlerSpecial = true) {
-    const charsetLettersLowercase = 'abcdefghijklmnopqrstuvwxyz';
-    const charsetLettersUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const charsetNumber = '1234567890';
-    const charsetSpecial = '!@#$%^&*()_+=[]';
-
-    let charset = charsetLettersLowercase;
-    let password = '';
-
-    if (handlerUppercase) {
-        charset += charsetLettersUppercase;
-    }
-    if (handlerNumber) {
-        charset += charsetNumber;
-    }
-    if (handlerSpecial) {
-        charset += charsetSpecial;
-    }
-
-    for (let i = 0; i < length; i++) {
-        password += charset[Math.floor(Math.random() * charset.length)];
-    }
-
-    return password;
-}
