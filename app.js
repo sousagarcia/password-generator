@@ -8,10 +8,15 @@ let chkUppercase = document.querySelector('#uppercase');
 let chkNumbers = document.querySelector('#numbers');
 let chkSpecial = document.querySelector('#special');
 let rgLength = document.querySelector('#rangePassword');
+let numberSlider = document.querySelector('.number-slider');
 
 bntEdit.addEventListener('click', () => {
     boxEdit.classList.toggle('active');
 });
+
+rgLength.addEventListener('input', () => {
+    numberSlider.textContent = rgLength.value;
+})
 
 btnGerar.addEventListener('click', () => { 
     let settings = {

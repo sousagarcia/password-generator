@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
@@ -20,12 +21,18 @@
 
             <div class="content-buttons">
                 <button class="primary-button btnGerar">🔑 Gerar Senha</button>
-                <button class="secondary-button btnEdit">Editar</button>
+                <button class="secondary-button btnEdit">Editar <span class="material-icons">keyboard_arrow_down</span></button>
             </div>
 
             <div class="edit-password">
-                <p>Tamanho</p>
-                <input type="range" min="1" max="50" value="30" id="rangePassword">
+                <div class="range-slider">
+                    <div>
+                        <p>Tamanho</p>
+                        <span class="number-slider">0</span>
+                    </div>                    
+                    <input type="range" min="1" max="50" value="30" id="rangePassword">
+                </div>
+                
 
                 <label for="uppercase">
                     <input type="checkbox" name="uppercase" id="uppercase">

@@ -42,6 +42,13 @@ button.secondary-button {
     border: 1px solid #3a3a3c;
     border-radius: 6px;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.secondary-button span {
+    margin-right: -12px;
 }
 
 input {
@@ -159,4 +166,14 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     transition: box-shadow 0.2s ease-in-out;
     position: relative;
+}
+
+.range-slider > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range-slider > div span {
+    font-size: 12px;
 }
