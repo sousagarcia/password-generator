@@ -11,6 +11,8 @@ let rgLength = document.querySelector('#rangePassword');
 let numberSlider = document.querySelector('.number-slider');
 
 bntEdit.addEventListener('click', () => {
+    numberSlider.textContent = rgLength.value;
+
     boxEdit.classList.toggle('active');
 });
 
