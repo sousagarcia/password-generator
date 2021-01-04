@@ -44,7 +44,7 @@ Este projeto foi realizado usando as seguintes tecnologias:
 
 ```bash
 # Clone o repositório em sua máquina
-$ git clone https://github.com/guilhermeivo/winforms-corrida-cavalo.git
+$ git clone https://github.com/guilhermeivo/password-generator.git
 ```
 
 #### :wrench: Configurando o ambiente
